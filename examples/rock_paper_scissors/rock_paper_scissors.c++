@@ -20,7 +20,7 @@ int main()
         {
             std::cin.clear();
             std::cout << "Invalid choice\n"
-                      << "Enter your choice: ";
+                      << "Enter your choice (type \"exit\" to quit the game): ";
             std::cin >> player_choice;
         }
 

@@ -7,19 +7,27 @@ int main()
     srand(time(NULL));
     std::string player_choice;
     int computer_choice;
-    std::cout << "Rock, Paper, Scissors\n";
+    std::cout << "              *********************\n"
+              << "              Rock, Paper, Scissors\n"
+              << "              *********************\n";
 
     while (true)
     {
-        std::cout << "Enter your choice: ";
+        std::cout << "Enter your choice (type \"exit\" to quit the game): ";
         std::cin >> player_choice;
         std::transform(player_choice.begin(), player_choice.end(), player_choice.begin(), tolower);
-        while (!std::cin || player_choice != "rock" && player_choice != "paper" && player_choice != "scissors")
+        while (!std::cin || player_choice != "rock" && player_choice != "paper" && player_choice != "scissors" && player_choice != "exit")
         {
             std::cin.clear();
             std::cout << "Invalid choice\n"
                       << "Enter your choice: ";
             std::cin >> player_choice;
+        }
+
+        if (player_choice == "exit")
+        {
+            std::cout << "Thank you for playing the game!";
+            break;
         }
 
         computer_choice = rand() % 3;

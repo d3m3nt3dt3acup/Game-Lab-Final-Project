@@ -16,7 +16,7 @@ int main()
     cbreak();
     curs_set(0);
     noecho();
-    mvprintw(Y_pos, X_pos, "W to move up, A to move west, S to move south, D to move east, X to exit");
+    mvprintw(Y_pos, X_pos, "W to move up, A to move left, S to move down, D to move right, X to exit");
     getch();
     clear();
     refresh();

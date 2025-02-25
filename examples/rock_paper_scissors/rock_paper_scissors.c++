@@ -39,11 +39,11 @@ int main()
             {
                 std::cout << "Tie.\n";
             }
-            if (player_choice == "paper")
+            else if (player_choice == "paper")
             {
                 std::cout << "You win!!!\n";
             }
-            if (player_choice == "scissors")
+            else if (player_choice == "scissors")
             {
                 std::cout << "You lose...\n";
             }
@@ -55,11 +55,11 @@ int main()
             {
                 std::cout << "You lose...\n";
             }
-            if (player_choice == "paper")
+            else if (player_choice == "paper")
             {
                 std::cout << "Tie.\n";
             }
-            if (player_choice == "scissors")
+            else if (player_choice == "scissors")
             {
                 std::cout << "You win!!!\n";
             }
@@ -71,11 +71,11 @@ int main()
             {
                 std::cout << "You win!!!\n";
             }
-            if (player_choice == "paper")
+            else if (player_choice == "paper")
             {
                 std::cout << "You lose...\n";
             }
-            if (player_choice == "scissors")
+            else if (player_choice == "scissors")
             {
                 std::cout << "Tie.\n";
             }

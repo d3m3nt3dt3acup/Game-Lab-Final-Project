@@ -22,6 +22,7 @@ int main()
             std::cout << "Invalid choice\n"
                       << "Enter your choice (type \"exit\" to quit the game): ";
             std::cin >> player_choice;
+            std::transform(player_choice.begin(), player_choice.end(), player_choice.begin(), tolower);
         }
 
         if (player_choice == "exit")
@@ -47,7 +48,7 @@ int main()
                 std::cout << "You lose...\n";
             }
         }
-        if (computer_choice == 1)
+        else if (computer_choice == 1)
         {
             std::cout << "The computer chose paper...\n";
             if (player_choice == "rock")
@@ -63,7 +64,7 @@ int main()
                 std::cout << "You win!!!\n";
             }
         }
-        if (computer_choice == 2)
+        else if (computer_choice == 2)
         {
             std::cout << "The computer chose scissors...\n";
             if (player_choice == "rock")

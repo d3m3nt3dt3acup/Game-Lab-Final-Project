@@ -27,6 +27,7 @@ int main()
         refresh();
         std::this_thread::sleep_for(std::chrono::milliseconds(delay_ms));
     }
+    endwin();
     return 0;
 }
 

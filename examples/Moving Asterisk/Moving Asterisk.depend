@@ -108,3 +108,8 @@
 	<wchar.h>
 	<ncursesw/unctrl.h>
 
+1740580334 source:d:\codeblocks\c++ projects\moving asterisk\main.cpp
+	<ncurses/ncurses.h>
+	<chrono>
+	<thread>
+

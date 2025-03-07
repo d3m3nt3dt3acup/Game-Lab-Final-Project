@@ -1,4 +1,4 @@
-# Game-Lab-Final-Project
+# TicTacToe
 
 Group members:
 

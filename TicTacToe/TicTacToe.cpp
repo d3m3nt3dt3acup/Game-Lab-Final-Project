@@ -165,7 +165,7 @@ void check_win(WINDOW *board, char &previous_player, WINDOW *title, int &title_w
 
 void win_routine(char &previous_player, WINDOW *title, int &title_width, char &another_game, WINDOW *board, WINDOW *player, int &player_width, WINDOW *instructions)
 {
-    // print winner in title
+    // print winner in player window
     curs_set(0);
     beep();
     if (previous_player == 'O')

@@ -65,8 +65,11 @@ int main()
     while (true)
     {
         get_input(input, cursor_X, board_width, cursor_Y, board_height, char_on_cursor, board, current_player, previous_player, turn_counter, player, player_width);
-        check_win(board, previous_player, title, title_width, another_game, player, player_width, instructions);
-        check_draw(turn_counter, title, title_width, another_game, board, player, instructions, player_width);
+        if (input == '\n')
+        {
+            check_win(board, previous_player, title, title_width, another_game, player, player_width, instructions);
+            check_draw(turn_counter, title, title_width, another_game, board, player, instructions, player_width);
+        }
         wmove(board, cursor_Y, cursor_X);
     }
 

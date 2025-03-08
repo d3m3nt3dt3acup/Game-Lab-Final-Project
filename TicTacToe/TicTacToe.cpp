@@ -4,7 +4,7 @@
 void get_input(char &input, int &cursor_X, int &board_width, int &cursor_Y, int &board_height, char &char_on_cursor, WINDOW *board, char &current_player, char &previous_player, int &turn_counter, WINDOW *player, int &player_width);
 void check_win(WINDOW *board, char &previous_player, WINDOW *title, int &title_width, char &another_game, WINDOW *player, int &player_width, WINDOW *instructions);
 void win_routine(char &previous_player, WINDOW *title, int &title_width, char &another_game, WINDOW *board, WINDOW *player, int &player_width, WINDOW *instructions);
-void check_draw(int &turn_counter, WINDOW *title, int &title_width, char &another_game, WINDOW *board, WINDOW *player, WINDOW *instructions);
+void check_draw(int &turn_counter, WINDOW *title, int &title_width, char &another_game, WINDOW *board, WINDOW *player, WINDOW *instructions, int &player_width);
 void next_game(WINDOW *title, char &another_game, WINDOW *board, WINDOW *player, WINDOW *instructions);
 
 int main()
@@ -66,7 +66,7 @@ int main()
     {
         get_input(input, cursor_X, board_width, cursor_Y, board_height, char_on_cursor, board, current_player, previous_player, turn_counter, player, player_width);
         check_win(board, previous_player, title, title_width, another_game, player, player_width, instructions);
-        check_draw(turn_counter, title, title_width, another_game, board, player, instructions);
+        check_draw(turn_counter, title, title_width, another_game, board, player, instructions, player_width);
         wmove(board, cursor_Y, cursor_X);
     }
 
@@ -180,15 +180,15 @@ void win_routine(char &previous_player, WINDOW *title, int &title_width, char &a
     next_game(title, another_game, board, player, instructions);
 }
 
-void check_draw(int &turn_counter, WINDOW *title, int &title_width, char &another_game, WINDOW *board, WINDOW *player, WINDOW *instructions)
+void check_draw(int &turn_counter, WINDOW *title, int &title_width, char &another_game, WINDOW *board, WINDOW *player, WINDOW *instructions, int &player_width)
 {
     // check for draw
     if (turn_counter == 9)
     {
         curs_set(0);
         beep();
-        mvwprintw(title, 1, (title_width / 3) - 1, "  Draw!  ");
-        wgetch(title);
+        mvwprintw(player, 1, (player_width / 3) - 5, "       Draw!     ");
+        wgetch(player);
         next_game(title, another_game, board, player, instructions);
     }
 }

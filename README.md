@@ -8,7 +8,7 @@ Use WASD to move the cursor, and Enter to place O's and X's. After a win/lose or
 
 To play the game, run the executable file in the TicTacToe folder.
 
-To compile from source, install the ncurses library and compile ~~~TicTacToe.cpp~~~ with your choice of compiler. This game was built with the following command: ~~~g++ TicTacToe.cpp -o TicTacToe -lncursesw~~~
+To compile from source, install the ncurses library and compile ```TicTacToe.cpp``` with your choice of compiler. This game was built with the following command: ```g++ TicTacToe.cpp -o TicTacToe -lncursesw```
 
 Group members:
 
